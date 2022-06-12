@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Sign In possibilities
-        final TextView signin = findViewById(R.id.signin);
+        final Button signin = findViewById(R.id.signin);
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,16 +62,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //
-        // Registration possibilities
+        // registration (sign up button)
         final TextView signup = findViewById(R.id.signup);
-        signup.setOnClickListener(new View.OnClickListener(){
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
-        //
-
     }
 }
